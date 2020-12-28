@@ -1,5 +1,5 @@
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Home from '../components/Home.vue'
 
 export default new Router({
   mode: 'history',
