@@ -1,5 +1,5 @@
 import Router from 'vue-router'
-import Home from '../components/Home.vue'
+import ShgHome from '../components/ShgHome.vue'
 
 export default new Router({
   mode: 'history',
@@ -7,7 +7,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: ShgHome
     },
   ]
 });
