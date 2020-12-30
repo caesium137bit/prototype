@@ -1,13 +1,22 @@
-import Router from 'vue-router'
-import ShgHome from '../components/ShgHome.vue'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-export default new Router({
+import ShgLogo from '../components/atoms/ShgLogo.vue'
+import ShgNavigationVar from '../components/molecules/ShgNavigationVar.vue'
+import ShgHome from '../components/templates/ShgHome.vue'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    component: ShgHome
+  },
+]
+
+const router = new VueRouter({
   mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: ShgHome
-    },
-  ]
-});
+  routes
+})
+
+export default router
