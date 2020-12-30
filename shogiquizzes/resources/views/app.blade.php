@@ -20,6 +20,7 @@
     <body>
 
         <div id="app">
+            <shg-logo></shg-logo>
             <shg-navigation-var></shg-navigation-var>
             <router-view/>
         </div>
