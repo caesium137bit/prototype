@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#">
       <img :src="'/favicon.ico'" width="30" height="30" class="d-inline-block align-top" alt="王将">
       AI将棋道場
