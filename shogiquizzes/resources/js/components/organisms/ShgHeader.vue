@@ -1,13 +1,18 @@
 <template>
-  <div>
-    <ShgLogo/>
-    <ShgNavigationVar/> 
-  </div>
+  <header>
+    <ShgLogo></ShgLogo>
+    <ShgNavigationVar></ShgNavigationVar> 
+  </header>
 </template>
 
 <script>
-import ShgLogo from 'components/atoms/ShgLogo.vue'
-import ShgNavigationVar from 'components/molecules/ShgNavigationVar.vue'
+import ShgLogo from '../atoms/ShgLogo.vue'
+import ShgNavigationVar from '../molecules/ShgNavigationVar.vue'
 
-export default {}
+export default {
+  components: {
+    ShgLogo,
+    ShgNavigationVar
+  }
+}
 </script>

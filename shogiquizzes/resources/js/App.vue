@@ -1,9 +1,6 @@
 <template>
   <div>
-    <header>
-      <ShgLogo></ShgLogo>
-      <ShgNavigationVar></ShgNavigationVar>
-    </header>
+    <ShgHeader></ShgHeader>
     <main>
       <div class="container">
         <RouterView />
@@ -13,13 +10,11 @@
 </template>
 
 <script>
-import ShgLogo from './components/atoms/ShgLogo.vue'
-import ShgNavigationVar from './components/molecules/ShgNavigationVar.vue'
+import ShgHeader from './components/organisms/ShgHeader.vue'
 
 export default {
   components: {
-    ShgLogo,
-    ShgNavigationVar
+    ShgHeader
   }
 }
 </script>
