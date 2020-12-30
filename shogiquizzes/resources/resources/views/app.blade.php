@@ -21,8 +21,7 @@
     <body>
 
         <div id="app">
-            <shg-logo></shg-logo>
-            <shg-navigation-var></shg-navigation-var>
+            <shg-header></shg-header>
             <router-view/>
         </div>
 
