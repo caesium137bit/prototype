@@ -24,7 +24,7 @@
           <router-link class="nav-link" to="/about">About</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/works">Works</router-link>
+          <router-link class="nav-link" to="/contact">Contact</router-link>
         </li>
         <!-- ドロップダウン -->
         <li class="nav-item dropdown">
@@ -32,8 +32,8 @@
             Information
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <router-link class="nav-link" to="/about">Shop</router-link>
-            <router-link class="nav-link" to="/about">Accees</router-link>
+            <router-link class="dropdown-item" to="/information1">Information1</router-link>
+            <router-link class="dropdown-item" to="/information2">Information2</router-link>
           </div>
         </li>
       </ul>
@@ -41,7 +41,7 @@
       <!-- 右側メニュー：Contactページへのリンク -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link btn btn-info" to="/contact">Contact</router-link>
+          <router-link class="nav-link btn btn-info" to="/quizzes">Start quizzes</router-link>
         </li>
       </ul>
       <!-- /ナビゲーションメニュー -->
