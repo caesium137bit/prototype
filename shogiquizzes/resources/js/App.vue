@@ -6,15 +6,18 @@
         <RouterView />
       </div>
     </main>
+    <ShgFooter></ShgFooter>
   </div>
 </template>
 
 <script>
 import ShgHeader from './components/organisms/ShgHeader.vue'
+import ShgFooter from './components/organisms/ShgFooter.vue'
 
 export default {
   components: {
-    ShgHeader
+    ShgHeader,
+    ShgFooter
   }
 }
 </script>
