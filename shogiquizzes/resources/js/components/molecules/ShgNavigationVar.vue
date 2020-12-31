@@ -4,10 +4,10 @@
   <!-- サブコンポーネント -->
   <div class="container">
     <!-- ブランド -->
-    <a class="navbar-brand" href="#">
+    <router-link class="navbar-brand" to="/">
       <img :src="'/favicon.ico'" width="30" height="30" class="d-inline-block align-top" alt="王将">
       AI将棋道場
-    </a>
+    </router-link>
     <!-- 切替ボタン -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
