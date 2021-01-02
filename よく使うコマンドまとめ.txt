@@ -16,3 +16,8 @@ php artisan db:seed
 
 git reset --hard ハッシュ値
 ↑特定のコミットまで戻す。
+
+php artisan tinker
+
+App\Models\Section::all();
+↑Sectionテーブル見れる。
