@@ -27,11 +27,4 @@ class Section extends Model
     {
         return $this->belongsToMany('App\Models\Category');
     }
-    
-    public function getData()
-    {
-        return $this->id . ': ' . $this->title . ' ('
-        . $this->person->name . ')';
-    }
-
 }

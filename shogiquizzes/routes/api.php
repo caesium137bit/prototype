@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/quizzes', 'SectionController@index');
+Route::get('/quizzes', 'App\Http\Controllers\SectionController@index');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
