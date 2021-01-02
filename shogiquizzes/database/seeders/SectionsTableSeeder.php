@@ -15,17 +15,17 @@ class SectionsTableSeeder extends Seeder
     public function run()
     {
        $param = [
-           'name' => '角換わり',
+           'title' => '角換わり',
        ];
        DB::table('sections')->insert($param);
 
        $param = [
-           'name' => '横歩取り',
+           'title' => '横歩取り',
        ];
        DB::table('sections')->insert($param);
 
        $param = [
-           'name' => '石田流',
+           'title' => '石田流',
        ];
        DB::table('sections')->insert($param);
     }
