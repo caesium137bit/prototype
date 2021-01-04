@@ -10,8 +10,8 @@ class SectionController extends Controller
     public function index()
     {
         return Section::with([
-  'quizzes:id,section_id',
-  'quizzes.choices:id,quiz_id'
-])->where('id', 1)->get(['id', 'title']);
+                 'quizzes:id,section_id,order,image_src,correct',
+                 'quizzes.choices:id,quiz_id,choice'
+               ])->where('id', 1)->get(['id', 'title']);
     }
 }
