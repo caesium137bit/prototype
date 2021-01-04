@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class SectionController extends Controller
 {
-    public function index()
-    {
+    public function index(Request $request)
+    {   
+        $id = $request->input('id');
+        
         return Section::with([
                  'quizzes:id,section_id,order,image_src,correct',
                  'quizzes.choices:id,quiz_id,choice'
-               ])->where('id', 1)->get(['id', 'title']);
+               ])->where('id', $id)->get(['id', 'title']);
     }
 }

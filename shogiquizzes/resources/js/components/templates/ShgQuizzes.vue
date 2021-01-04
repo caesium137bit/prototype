@@ -20,7 +20,7 @@
       },
       methods: {
           getSection() {
-              axios.get('/api/quizzes')
+              axios.get('/api/quizzes?id=1')
                   .then((res) => {
                       this.section = res.data;
                   });
