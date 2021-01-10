@@ -11,6 +11,8 @@ C:\Users\利用者名\AppData\Roaming\Composer\vendor\bin
 プロジェクトを作成するディレクトリに移動後以下のコマンドを実行（プロジェクト名は適宜変更）
 Laravel new shogiquizzes
 
+composer install
+
 プロジェクト内にcdで移動後
 php artisan serve
 
