@@ -3,8 +3,8 @@
       <h4 class="card-header">クイズの長さ {{quizLen}} Section{{section[sectionNo].id}} {{section[sectionNo].title}} Part{{section[sectionNo].quizzes[quizNo].order}}</h4>
       <img class="card-img-top" v-bind:src="section[sectionNo].quizzes[quizNo].image_src" alt="局面図">
       <div class="card-body">
-        <div class="list-group">     
-          <button type="button" class="list-group-item list-group-item-action list-group-item-primary text-center text-weight-bold active" v-bind:value="section[sectionNo].quizzes[quizNo].choices[choiceNo].choice" v-on:click="onClickChoice">{{section[sectionNo].quizzes[quizNo].choices[choiceNo].choice}}</button>
+        <div class="list-group" v-for="choice in section[sectionNo].quizzes[quizNo].choices"  v-bind:key="choice">     
+          <button type="button" class="list-group-item list-group-item-action list-group-item-primary text-center text-weight-bold active" v-bind:value="choice.choice" v-on:click="onClickChoice">{{choice.choice}}</button>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
                   });
           },
           onClickChoice: function (event) {
-              this.quizNo += 1
+              this.quizNo ++
           }
       },
       mounted() {
