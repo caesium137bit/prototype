@@ -1,8 +1,8 @@
 <template> 
   <div class="container py-4">
-    <div class="card border-primary mx-auto" style="max-width: 25rem;">
+    <div class="card border-primary mx-auto" v-if="!isEndSection">
       <div class="card-header border-primary">
-        <h4>クイズの長さ {{quizLen}} 正解数{{correctCount}} Section{{section[sectionNo].id}} {{section[sectionNo].title}} Part{{section[sectionNo].quizzes[quizNo].order}}</h4>
+        <h4>Section{{section[sectionNo].id}} {{section[sectionNo].title}} Part{{section[sectionNo].quizzes[quizNo].order}}</h4>
       </div>
       <img class="card-img-top" v-bind:src="section[sectionNo].quizzes[quizNo].image_src" alt="局面図">
       <div class="card-body">
@@ -13,7 +13,16 @@
       <div class="card-footer border-primary">
         <h4>{{quizNo}}問中{{correctCount}}問正解!</h4>
       </div>
-    </div>
+    </div>   
+    
+    <div class="card border-primary mx-auto" v-if="isEndSection">
+      <div class="card-header border-primary">
+        <h4 class="text-center font-weight-bold">最終結果</h4>
+      </div>
+      <div class="card-body">
+        <p class="text-success text-center shg-result-p">{{quizNo}}問中{{correctCount}}問正解!</p>
+      </div>
+    </div>   
   </div>
 </template>
 
@@ -22,16 +31,16 @@
       data: function () {
           return {
               section: [],
-              sectionID: 1,             
+              sectionID: 3,             
               sectionNo: 0,
               quizNo: 0,
-              choiceNo: 0,
-              correctCount: 0
+              correctCount: 0,
+              isEndSection: false
           }
       },     
       computed: {
           quizLen: function () {
-              return Object.keys(this.section).length
+              return Object.keys(this.section[this.sectionNo].quizzes).length
           }
       },
       methods: {
@@ -46,6 +55,9 @@
                   this.correctCount ++
               }
               this.quizNo ++
+              if (this.quizNo == this.quizLen) {
+                  this.isEndSection = true
+              }
           }
       },
       mounted() {
@@ -53,3 +65,12 @@
       }
   }
 </script>
+
+<style scoped>
+.shg-result-p {
+  font-size: 2rem;
+}
+.card {
+  max-width: 25rem;
+}
+</style>
