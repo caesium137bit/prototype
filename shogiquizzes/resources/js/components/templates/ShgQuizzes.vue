@@ -21,7 +21,7 @@
               sectionNo: 0,
               quizNo: 0,
               choiceNo: 0,
-              correctCount: ''
+              correctCount: 0
           }
       },     
       computed: {
@@ -37,8 +37,10 @@
                   });
           },
           onClickChoice: function (event) {
+              if (event.target.value == this.section[this.sectionNo].quizzes[this.quizNo].correct) {
+                  this.correctCount ++
+              }
               this.quizNo ++
-              this.correctCount = event.target.value
           }
       },
       mounted() {
