@@ -7,6 +7,7 @@ import ShgContact from '../components/templates/ShgContact.vue'
 import ShgInformation1 from '../components/templates/ShgInformation1.vue'
 import ShgInformation2 from '../components/templates/ShgInformation2.vue'
 import ShgQuizzes from '../components/templates/ShgQuizzes.vue'
+import ShgSelectQuiz from '../components/templates/ShgSelectQuiz.vue'
 
 
 Vue.use(VueRouter)
@@ -35,6 +36,10 @@ const routes = [
   {
     path: '/quizzes',
     component: ShgQuizzes
+  },
+  {
+    path: '/select-quiz',
+    component: ShgSelectQuiz
   }
 ]
 
