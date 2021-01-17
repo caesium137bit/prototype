@@ -20,7 +20,7 @@
         <h4 class="text-center font-weight-bold">最終結果</h4>
       </div>
       <div class="card-body">
-        <p class="text-success text-center shg-result-p">{{quizNo}}問中{{correctCount}}問正解!</p>
+        <p class="text-success text-center shg-result-p">test{{test}} {{quizNo}}問中{{correctCount}}問正解!</p>
       </div>
     </div>   
   </div>
@@ -30,8 +30,8 @@
   export default {
       data: function () {
           return {
-              section: [],
-              sectionID: 3,             
+              section: [],   
+              sectionId: 3,       
               sectionNo: 0,
               quizNo: 0,
               correctCount: 0,
@@ -41,11 +41,14 @@
       computed: {
           quizLen: function () {
               return Object.keys(this.section[this.sectionNo].quizzes).length
+          },
+          test() {
+              return this.$store.state.shogi.sectionId;
           }
       },
       methods: {
           getSection() {
-              axios.get('/api/quizzes?id=' + this.sectionID)
+              axios.get('/api/quizzes?id=' + this.sectionId)
                   .then((res) => {
                       this.section = res.data;
                   });
