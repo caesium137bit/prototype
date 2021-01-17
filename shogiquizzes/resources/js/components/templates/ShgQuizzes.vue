@@ -20,7 +20,7 @@
         <h4 class="text-center font-weight-bold">最終結果</h4>
       </div>
       <div class="card-body">
-        <p class="text-success text-center shg-result-p">test{{test}} {{quizNo}}問中{{correctCount}}問正解!</p>
+        <p class="text-success text-center shg-result-p">{{quizNo}}問中{{correctCount}}問正解!</p>
       </div>
     </div>   
   </div>
@@ -30,8 +30,7 @@
   export default {
       data: function () {
           return {
-              section: [],   
-              sectionId: 3,       
+              section: [],     
               sectionNo: 0,
               quizNo: 0,
               correctCount: 0,
@@ -39,11 +38,11 @@
           }
       },     
       computed: {
+          sectionId() {
+              return this.$store.state.shogi.sectionId;
+          },
           quizLen: function () {
               return Object.keys(this.section[this.sectionNo].quizzes).length
-          },
-          test() {
-              return this.$store.state.shogi.sectionId;
           }
       },
       methods: {
