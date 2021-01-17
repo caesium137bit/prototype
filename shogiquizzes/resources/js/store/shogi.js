@@ -4,7 +4,11 @@ const state = {
 
 const getters = {}
 
-const mutations = {}
+const mutations = {
+  changeSectionId(state, value) {
+    state.sectionId = value;
+  }
+}
 
 const actions = {}
 

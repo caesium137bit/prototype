@@ -11,6 +11,13 @@ class SectionController extends Controller
     {   
         $id = $request->input('id');
         
+        return Section::all();
+    }
+    
+    public function getSection(Request $request)
+    {   
+        $id = $request->input('id');
+        
         return Section::with([
                  'quizzes:id,section_id,order,image_src,correct',
                  'quizzes.choices:id,quiz_id,choice'

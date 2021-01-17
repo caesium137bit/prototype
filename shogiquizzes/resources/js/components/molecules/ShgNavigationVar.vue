@@ -41,7 +41,7 @@
       <!-- 右側メニュー：Contactページへのリンク -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link btn btn-info" to="/quizzes">Start quizzes</router-link>
+          <router-link class="nav-link btn btn-info" to="/select-quiz">将棋次の一手</router-link>
         </li>
       </ul>
       <!-- /ナビゲーションメニュー -->
