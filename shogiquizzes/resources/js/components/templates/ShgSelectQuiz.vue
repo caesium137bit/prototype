@@ -1,8 +1,8 @@
 <template> 
   <div>
     <div class="list-group" v-for="section in sections"  v-bind:key="section.id">
-      <router-link class="list-group-item list-group-item-action" to="/quizzes" v-bind:value="section.id" v-on:click.native="onClickSection($event)">{{section.id}}:{{section.title}}</router-link>
-    </div>
+      <button class="list-group-item list-group-item-action" v-on:click="$router.push({ path: '/quizzes/${section.id}'})">{{section.id}}:{{section.title}}</button>
+    </div>      
   </div>
 </template>
 
@@ -19,9 +19,6 @@
                   .then((res) => {
                       this.sections = res.data;
                   });
-          },
-          onClickSection: function (event) {
-              this.$store.commit('shogi/changeSectionId', 1);
           }
       },
       mounted() {

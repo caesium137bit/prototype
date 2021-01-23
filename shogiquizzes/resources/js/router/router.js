@@ -15,30 +15,37 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'home',
     component: ShgHome
   },
   {
     path: '/about',
+    name: 'about',
     component: ShgAbout
   },
   {
     path: '/contact',
+    name: 'contact',
     component: ShgContact
   },
   {
     path: '/information1',
+    name: 'information1',
     component: ShgInformation1
   },
   {
     path: '/information2',
+    name: 'information2',
     component: ShgInformation2
   },
   {
-    path: '/quizzes',
+    path: '/quizzes:id',
+    name: 'quizzes',
     component: ShgQuizzes
   },
   {
     path: '/select-quiz',
+    name: 'select-quiz',
     component: ShgSelectQuiz
   }
 ]

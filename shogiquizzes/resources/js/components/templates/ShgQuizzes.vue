@@ -39,7 +39,7 @@
       },     
       computed: {
           sectionId() {
-              return this.$store.state.shogi.sectionId;
+              return this.$route.params.id;
           },
           quizLen: function () {
               return Object.keys(this.section[this.sectionNo].quizzes).length
