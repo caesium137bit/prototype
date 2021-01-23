@@ -4,13 +4,13 @@
     <!-- ナビゲーション -->
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
-        <router-link class="nav-link" to="{ name: 'home' }">Home</router-link>
+        <router-link class="nav-link" :to="{ name: 'home' }">Home</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="{ name: 'about' }">About</router-link>
+        <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="{ name: 'contact' }">Contact</router-link>
+        <router-link class="nav-link" :to="{ name: 'contact' }">Contact</router-link>
       </li>
       <!-- ドロップダウン -->
       <li class="nav-item dropdown">
@@ -18,8 +18,8 @@
           Information
         </a>
         <div class="dropdown-menu" aria-labelledby="footerDropdown">
-          <router-link class="dropdown-item" to="{ name: 'information1' }">Information1</router-link>
-          <router-link class="dropdown-item" to="{ name: 'information2' }">Information2</router-link>
+          <router-link class="dropdown-item" :to="{ name: 'information1' }">Information1</router-link>
+          <router-link class="dropdown-item" :to="{ name: 'information2' }">Information2</router-link>
         </div>
       </li>
     </ul>

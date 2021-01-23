@@ -1,7 +1,7 @@
 <template> 
   <div>
     <div class="list-group" v-for="section in sections"  v-bind:key="section.id">
-      <button class="list-group-item list-group-item-action" v-on:click="$router.push({ path: '/quizzes/${section.id}'})">{{section.id}}:{{section.title}}</button>
+      <button class="list-group-item list-group-item-action" v-on:click="$router.push({ name: 'quizzes', params: { id: 2 }})">{{section.id}}:{{section.title}}</button>
     </div>      
   </div>
 </template>
